@@ -29,7 +29,7 @@ end
 
 ## Convert a Jupyter notebook into a Literate notebook
 
-Adapted from https://github.com/JuliaInterop/NBInclude.jl. I added separators `#---` for code blocks.
+Adapted from [NBInclude.jl](https://github.com/JuliaInterop/NBInclude.jl). Separators `#---` were added for code blocks.
 
 ```julia
 function to_literate(nbpath; shell_or_help=r"^\s*[;?]")
