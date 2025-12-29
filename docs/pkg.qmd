@@ -63,7 +63,7 @@ JuliaHello.greet()
 
 Make a Git repo for your custom package and publish it to Git service providers, e.g. GitHub / Gitlab. And then you can `]add https://github.com/username/Mod1.jl.git`
 
-[PkgTemplates.jl](https://github.com/invenia/PkgTemplates.jl) or [PkgSkeleton.jl](https://github.com/tpapp/PkgSkeleton.jl) is recommended to generate package with unit tests and CI/CD settings.
+[PkgTemplates.jl](https://github.com/JuliaCI/PkgTemplates.jl) or [PkgSkeleton.jl](https://github.com/tpapp/PkgSkeleton.jl) is recommended to generate package with unit tests and CI/CD settings.
 
 You could also [register your package](https://github.com/JuliaRegistries/Registrator.jl) to the general Julia registry to be more accessible.
 
@@ -99,7 +99,6 @@ DocumenterTools.genkeys(user="you", repo="YourPackage.jl")
 ## Reference
 
 - [Julia workflow tips](https://docs.julialang.org/en/v1/manual/workflow-tips/)
-- [Pkg.jl docs](https://julialang.github.io/Pkg.jl/v1/)
+- [Pkg.jl docs](https://pkgdocs.julialang.org/v1/)
 - [Comparison between v0.6 and v0.7 (SO)](https://stackoverflow.com/questions/36398629/change-package-directory-in-julia/36400065#36400065)
-- [Developing your Julia package (Medium post)](https://medium.com/coffee-in-a-klein-bottle/developing-your-julia-package-682c1d309507)
 - [YouTube: Developing Julia packages by Chris](https://youtu.be/QVmU29rCjaA)
