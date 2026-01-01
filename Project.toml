@@ -1,5 +1,6 @@
 [deps]
 ComponentArrays = "b0b7db55-cfe3-40fc-9ded-d10e2dbeff66"
+CurveFit = "5a033b19-8c74-5913-a970-47c3779ef25c"
 Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
 DisplayAs = "0b91fe84-8a4c-11e9-3e1d-67c38462b6d6"
 Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"

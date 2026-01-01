@@ -2,7 +2,7 @@
 
 julia_version = "1.12.3"
 manifest_format = "2.0"
-project_hash = "d4b014157165990fc1e453b340334b5c282ab67e"
+project_hash = "72c984a4f69129c4a0f31c29d0a10f7973763779"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "8b2b045b22740e4be20654175cc38291d48539db"
@@ -409,6 +409,12 @@ git-tree-sha1 = "fcbb72b032692610bfbdb15018ac16a36cf2e406"
 uuid = "adafc99b-e345-5852-983c-f28acb93d879"
 version = "0.3.1"
 
+[[deps.CurveFit]]
+deps = ["ADTypes", "CommonSolve", "ConcreteStructs", "DifferentiationInterface", "Distributions", "FastRationals", "ForwardDiff", "InverseFunctions", "LinearAlgebra", "LinearSolve", "Markdown", "NonlinearSolve", "NonlinearSolveBase", "RecursiveArrayTools", "SciMLBase", "Setfield", "StatsAPI"]
+git-tree-sha1 = "3ee188d5bd4e4f6782e35d243b4b8794b6495bc3"
+uuid = "5a033b19-8c74-5913-a970-47c3779ef25c"
+version = "1.0.0"
+
 [[deps.DataAPI]]
 git-tree-sha1 = "abe83f3a2f1b857aac70ef8b269080af17764bbe"
 uuid = "9a962f9c-6df0-11e9-0e5d-c546b8b5ee8a"
@@ -735,6 +741,11 @@ version = "1.2.0"
     Mooncake = "da2b9cff-9c12-43a0-ae48-6db2b0edb7d6"
     ReverseDiff = "37e2e3b7-166d-5795-8a7a-e32c996b4267"
     Tracker = "9f7883ad-71c0-57eb-9f7f-b5c9e6d3789c"
+
+[[deps.FastRationals]]
+git-tree-sha1 = "8712d8f217df217ce44634be0ca679ce14a62e3b"
+uuid = "275e499e-7a09-5551-a1d1-9fe535a2b717"
+version = "0.3.0"
 
 [[deps.FileWatching]]
 uuid = "7b1f6079-737a-58dc-b8bc-7a2ca5c1b5ee"
