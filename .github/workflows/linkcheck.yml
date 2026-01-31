@@ -8,6 +8,7 @@ on:
     branches:
       - main
     paths:
+      - 'docs/**'
       - '.lycheeignore'
       - '.github/workflows/linkcheck.yml'
 
@@ -50,7 +51,7 @@ jobs:
         with:
           fail: false
           failIfEmpty: false
-          args: '--accept 200,204,429 --verbose --no-progress --cache --max-cache-age 1d "docs/**/*.md" "docs/**/*.qmd" "docs/**/*.jl"'
+          args: '--accept 200,204,429 --verbose --no-progress --cache --max-cache-age 1d "docs/**/*.md" "docs/**/*.jl"'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Issue From File

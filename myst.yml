@@ -1,0 +1,39 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  title: Julia Tips
+  description: Julia Tips I collected
+  # keywords: []
+  authors: ["Wen-Wei Tseng"]
+  license: CC-BY-4.0
+  open_access: true
+  settings:
+    output_matplotlib_strings: remove
+  github: https://github.com/sosiristseng/jl-tips
+  # bibliography:
+  #   - docs/references.bib
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  # https://mystmd.org/guide/table-of-contents
+  toc:
+    - file: docs/index.ipynb
+    - file: docs/docproc.md
+    - file: docs/pkg.md
+    - file: docs/array-tips.ipynb
+    - title: Modeling
+      children:
+        - file: docs/modeling/index.md
+        - pattern: docs/modeling/*.ipynb
+    - title: Visulization
+      children:
+        - file: docs/visual/index.md
+        - pattern: docs/visual/*.ipynb
+
+site:
+  template: book-theme
+  options:
+    folders: true
+    logo_text: "JuliaBook Template"
+  # favicon: favicon.ico
+  # logo: site_logo.png
+  # style: ./my-style.css
+  nav: []
