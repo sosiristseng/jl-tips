@@ -28,18 +28,17 @@ function build_u0_ps(; x_min=0.0, x_max=1.0, y_min=0.0, y_max=1.0, α=10.0, N=26
         u0.u[I] = 22 * (y * (1 - y))
         u0.v[I] = 27 * (x * (1 - x))
     end
-    ps = (; α=α, xx=xx, yy=yy, dx=dx, dy=dy, N=N)
+    ps = (; xx=xx, yy=yy, Dx=α/dx^2, Dy=α/dy^2, N=N)
     return u0, ps
 end
 
-# Discretized PDE problem is a coupled ODE problem under the hood.
+# A discretized PDE problem is a coupled ODE problem under the hood.
 function model!(ds, s, p, t)
-    @unpack α, xx, yy, dx, dy, N = p
-    @unpack u, v = s
+    SimpleUnPack.@unpack xx, yy, Dx, Dy, N = p
+    SimpleUnPack.@unpack u, v = s
     brusselator_f(x, y, t) = (((x - 0.3)^2 + (y - 0.6)^2) <= 0.1^2) * (t >= 1.1) * 5
     ## Interating all grid points
-    alphax = α / dx^2
-    alphay = α / dy^2
+
     @inbounds for I in CartesianIndices((N, N))
         i, j = Tuple(I)
         x = xx[I[1]]
@@ -51,8 +50,8 @@ function model!(ds, s, p, t)
         i_next = clamp(i + 1, 1, N)
         j_prev = clamp(j - 1, 1, N)
         j_next = clamp(j + 1, 1, N)
-        unabla = alphax * (u[i, j_prev] - 2u[i, j] + u[i, j_next]) + alphay * (u[i_prev, j] - 2u[i, j] + u[i_next, j])
-        vnabla = alphax * (v[i, j_prev] - 2v[i, j] + v[i, j_next]) + alphay * (v[i_prev, j] - 2v[i, j] + v[i_next, j])
+        unabla = Dx * (u[i, j_prev] - 2u[i, j] + u[i, j_next]) + Dy * (u[i_prev, j] - 2u[i, j] + u[i_next, j])
+        vnabla = Dx * (v[i, j_prev] - 2v[i, j] + v[i, j_next]) + Dy * (v[i_prev, j] - 2v[i, j] + v[i_next, j])
         ds.u[i, j] = unabla + uterm
         ds.v[i, j] = vnabla + vterm
     end
@@ -63,4 +62,4 @@ end
 u0, ps = build_u0_ps(;N=26)
 tspan = (0, 11.5)
 prob = ODEProblem(model!, u0, tspan, ps)
-@time sol = solve(prob, QNDF(), saveat=0.1)
+@time sol = solve(prob, FBDF(), saveat=0.1)
