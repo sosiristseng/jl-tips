@@ -2,7 +2,7 @@
 version: 1
 project:
   title: Julia Tips
-  description: Julia Tips I collected
+  description: Collected Julia Tips
   # keywords: []
   authors: ["Wen-Wei Tseng"]
   license: CC-BY-4.0
