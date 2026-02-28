@@ -16,8 +16,6 @@ project:
   # https://mystmd.org/guide/table-of-contents
   toc:
     - file: docs/index.ipynb
-    - file: docs/docproc.md
-    - file: docs/pkg.md
     - file: docs/array-tips.ipynb
     - title: Modeling
       children:
