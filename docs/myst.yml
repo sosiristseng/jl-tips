@@ -15,16 +15,16 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   # https://mystmd.org/guide/table-of-contents
   toc:
-    - file: docs/index.ipynb
-    - file: docs/array-tips.ipynb
+    - file: index.ipynb
+    - file: array-tips.ipynb
     - title: Modeling
       children:
-        - file: docs/modeling/index.md
-        - pattern: docs/modeling/*.ipynb
+        - file: modeling/index.md
+        - pattern: modeling/*.ipynb
     - title: Visulization
       children:
-        - file: docs/visual/index.md
-        - pattern: docs/visual/*.ipynb
+        - file: visual/index.md
+        - pattern: visual/*.ipynb
 
 site:
   template: book-theme
