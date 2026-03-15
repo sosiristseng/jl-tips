@@ -56,9 +56,9 @@ jobs:
       id: cache-julia
       with:
         path: ~/.julia
-        key: ${{ runner.os }}-julia-${{ steps.julia-version.outputs.value }}-${{ steps.hash.outputs.value }}
+        key: ${{ runner.os }}-julia-${{ steps.julia-version.outputs.resolved }}-${{ steps.hash.outputs.value }}
         restore-keys: |
-          ${{ runner.os }}-julia-${{ steps.julia-version.outputs.value }}
+          ${{ runner.os }}-julia-${{ steps.julia-version.outputs.resolved }}
     - name: Install Julia packages
       if: ${{ steps.cache-nb.outputs.cache-hit != 'true' && (runner.environment == 'self-hosted' || steps.cache-julia.outputs.cache-hit != 'true') }}
       shell: julia --color=yes --project=@. {0}
