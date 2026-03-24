@@ -32,10 +32,8 @@ jobs:
         id: setup-python
         with:
           python-version: ${{ env.PY_VER }}
-      - name: Install the latest version of uv
-        uses: astral-sh/setup-uv@v7
       - name: Install nbconvert
-        run: uv pip install --system nbconvert
+        run: pip install  nbconvert
       - name: Convert ipynb files to markdown
         run: >
           find docs/ -type f -name '*.ipynb' |
