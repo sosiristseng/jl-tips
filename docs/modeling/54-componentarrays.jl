@@ -65,15 +65,6 @@ map(u -> u.lotka.x, comp_sol(ts).u)
 lotka_sol = solve(lotka_prob, Tsit5())
 lotka_sol(1.0).x
 
-# ## Symbolic mapping in `ODEFunction`
-# - `syms=keys(carray)`.
-# - Only valid in non-nested `ComponentArrays`.
-
-lotka_func = ODEFunction(lotka!; syms=keys(lotka_ic))
-@time lab_sol = solve(ODEProblem(lotka_func, lotka_ic, tspan, lotka_p), Tsit5());
-
-lab_sol(0.0:0.1:20, idxs=:x)
-
 # ## Update a subset of the elements in ComponentArrays
 using ForwardDiff
 newval = ForwardDiff.Dual(3.0, 1.0)
