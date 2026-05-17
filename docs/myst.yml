@@ -17,6 +17,10 @@ project:
   toc:
     - file: index.ipynb
     - file: array-tips.ipynb
+    - title: DataFrames
+      children:
+        - file: dataframes/index.md
+        - pattern: dataframes/*.ipynb
     - title: Modeling
       children:
         - file: modeling/index.md
@@ -25,6 +29,11 @@ project:
       children:
         - file: visual/index.md
         - pattern: visual/*.ipynb
+    - title: Misc
+      children:
+        - file: misc/index.md
+        - pattern: misc/*.ipynb
+    - file: runtime.ipynb
 
 site:
   template: book-theme
