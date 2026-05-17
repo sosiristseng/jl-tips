@@ -15,7 +15,7 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   # https://mystmd.org/guide/table-of-contents
   toc:
-    - file: index.ipynb
+    - file: index.md
     - file: array-tips.ipynb
     - title: DataFrames
       children:
