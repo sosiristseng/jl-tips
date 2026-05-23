@@ -16,7 +16,6 @@ project:
   # https://mystmd.org/guide/table-of-contents
   toc:
     - file: index.md
-    - file: array-tips.ipynb
     - title: DataFrames
       children:
         - file: dataframes/index.md
@@ -31,7 +30,7 @@ project:
         - pattern: visual/*.ipynb
     - title: Misc
       children:
-        - file: misc/index.md
+        - file: misc/*.md
         - pattern: misc/*.ipynb
     - file: runtime.ipynb
 
