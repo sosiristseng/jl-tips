@@ -21,8 +21,9 @@
 ## File IO
 
 - [DataFrames.jl](https://github.com/JuliaData/DataFrames.jl) : In-memory tabular data in Julia.
-- [JLD2.jl](https://github.com/JuliaIO/JLD2.jl) : Saves and loads Julia objects in the HDF5 format.
 - [CSV.jl](https://github.com/JuliaData/CSV.jl) : Saves and load data in the `csv` format.
+- [HDF5.jl](https://github.com/JuliaIO/HDF5.jl) : Save and load data in the HDF5 file format from Julia.
+- [JLD2.jl](https://github.com/JuliaIO/JLD2.jl) : Saves and loads Julia objects in the HDF5 format.
 
 ## Misc
 
