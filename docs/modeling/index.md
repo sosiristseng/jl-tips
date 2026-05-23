@@ -28,4 +28,4 @@
 ## Misc
 
 - [Symbolics.jl](https://github.com/JuliaSymbolics/Symbolics.jl) : A symbolic calculation package.
-- [NonlinearSolve.jl](https://github.com/SciML/NonlinearSolve.jl) : Solving nonlinear qquations.
+- [NonlinearSolve.jl](https://github.com/SciML/NonlinearSolve.jl) : Solving nonlinear equations.
