@@ -16,10 +16,6 @@ project:
   # https://mystmd.org/guide/table-of-contents
   toc:
     - file: index.md
-    - title: DataFrames
-      children:
-        - file: dataframes/index.md
-        - pattern: dataframes/*.ipynb
     - title: Modeling
       children:
         - file: modeling/index.md
