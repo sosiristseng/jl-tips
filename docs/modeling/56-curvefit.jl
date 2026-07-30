@@ -35,6 +35,7 @@ The algorithms used in `CurveFit.jl` are better suited for ill-conditioned nonli
 See a list of algorithms in the [documentation](https://docs.sciml.ai/CurveFit/stable/tutorials/getting_started/).
 ===#
 using CurveFit
+using NonlinearSolve
 
 ## Define a nonlinear function: y = a[1] + a[2] * x^a[3]
 fn(a, x) = @. a[1] + a[2] * x^a[3]
