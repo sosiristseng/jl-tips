@@ -2,6 +2,7 @@
 using ModelingToolkit
 using ModelingToolkit: t_nounits as t, D_nounits as D
 using OrdinaryDiffEq
+using SymbolicIndexingInterface
 using Plots
 
 "Numpy's meshgrid clone"
@@ -18,8 +19,8 @@ function get_gradient(prob, xsym, ysym, xx, yy; t = nothing)
     ∂F = prob.f
     ps = prob.p
     sys = prob.f.sys
-    xidx = ModelingToolkit.variable_index(sys, xsym)
-    yidx = ModelingToolkit.variable_index(sys, ysym)
+    xidx = SymbolicIndexingInterface.variable_index(sys, xsym)
+    yidx = SymbolicIndexingInterface.variable_index(sys, ysym)
     dx = map((x, y) -> ∂F(swap_or_not(x, y; xidx), ps, t)[xidx], xx, yy)
     dy = map((x, y) -> ∂F(swap_or_not(x, y; xidx), ps, t)[yidx], xx, yy)
     return (dx, dy)
