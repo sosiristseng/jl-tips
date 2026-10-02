@@ -24,10 +24,6 @@ project:
       children:
         - file: visual/index.md
         - pattern: visual/*.ipynb
-    - title: Dataframes
-      children:
-        - file: dataframe/index.md
-        - pattern: dataframe/*.ipynb
     - title: Misc
       children:
         - file: misc/*.md
